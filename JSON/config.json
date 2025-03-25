@@ -1,0 +1,212 @@
+{
+  "target_ip": "00.00.00.00",
+  "logging_url": "https://discord.com/api/webhooks/000",
+  "ports": [80, 8080, 443, 8443, 9090, 9443, 9999, 10000, 10443, 11000],
+  "attack_types": [
+    "TCP SYN Flood",
+    "HTTP Flood",
+    "UDP Flood",
+    "DNS Amplification",
+    "ICMP Flood",
+    "Slowloris Attack",
+    "NTP Reflection"
+  ],
+  "threads_per_attack": 50,
+  "attack_duration_seconds": 3600,
+  "max_bandwidth_usage": "10Gbps",
+  "target_response_time_threshold": 200,
+  "use_proxy": true,
+  "proxy_list": [
+    "192.168.0.1:8080",
+    "192.168.0.2:8080",
+    "192.168.0.3:8080",
+    "192.168.0.4:8080",
+    "192.168.0.5:8080"
+  ],
+  "user_agents": [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36"
+  ],
+  "retry_attempts": 5,
+  "timeout_seconds": 30,
+  "target_check_interval_seconds": 60,
+  "dns_server_ip": "8.8.8.8",
+  "ntp_server_ip": "time.google.com",
+  "icmp_flood": {
+    "enabled": true,
+    "max_packets_per_second": 1000
+  },
+  "http_flood": {
+    "enabled": true,
+    "headers": {
+      "User-Agent": "Mozilla/5.0",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Connection": "keep-alive",
+      "Upgrade-Insecure-Requests": "1"
+    },
+    "methods": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  "udp_flood": {
+    "enabled": true,
+    "packet_size": 1024
+  },
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "log_file": "attack_logs.txt",
+    "log_format": "[%(asctime)s] %(levelname)s: %(message)s"
+  },
+  "attack_stages": [
+    "Initial Attack",
+    "Sustained Attack",
+    "Peak Attack",
+    "Recovery"
+  ],
+  "recovery_time_minutes": 10,
+  "attack_delay_seconds": 5,
+  "attack_multiplier": 2,
+  "randomize_ports": true,
+  "ports_range": {
+    "min": 1000,
+    "max": 65535
+  },
+  "network_tools": [
+    "nmap",
+    "curl",
+    "wget",
+    "netstat"
+  ],
+  "target_log_threshold": 10000,
+  "geolocation": {
+    "country": "USA",
+    "region": "California",
+    "city": "San Francisco"
+  },
+  "user_behavior": {
+    "randomize_requests": true,
+    "request_interval": 1,
+    "simulate_human_behavior": true
+  },
+  "misc": {
+    "random_data_1": "ABcd1234!@",
+    "random_data_2": "random_string_908273",
+    "random_data_3": 875346,
+    "random_data_4": true,
+    "random_data_5": "RandomTextForTestingPurpose",
+    "random_data_6": 67890
+  },
+  "attack_restart_interval_minutes": 30,
+  "max_connections": 100000,
+  "random_user_agents": true,
+  "use_proxy_rotation": true,
+  "attack_start_time": "2025-03-25T10:00:00Z",
+  "max_threads_per_attack": 100,
+  "disable_ipv6": true,
+  "encryption_enabled": false,
+  "data_encryption_key": "my_encryption_key_here",
+  "data_encryption_algorithm": "AES256",
+  "proxy_rotation_interval_seconds": 600,
+  "logging_to_file": true,
+  "debug_mode": false,
+  "json_data": {
+    "field_1": "value_1",
+    "field_2": "value_2",
+    "field_3": "value_3",
+    "field_4": "value_4",
+    "field_5": "value_5"
+  },
+  "attack_sequence": [
+    {
+      "attack_type": "TCP SYN Flood",
+      "duration_seconds": 1800
+    },
+    {
+      "attack_type": "HTTP Flood",
+      "duration_seconds": 1800
+    },
+    {
+      "attack_type": "UDP Flood",
+      "duration_seconds": 1800
+    }
+  ],
+  "target_status": {
+    "is_online": true,
+    "response_time_ms": 100,
+    "is_vulnerable": false
+  },
+  "attack_intensity": "High",
+  "attack_completion_percentage": 0,
+  "attack_result": "In Progress",
+  "target_status_check_interval_seconds": 60,
+  "attack_start_time_unix": 1679740800,
+  "attack_end_time_unix": 1679751600,
+  
+  "extra_data_fields": [
+    {"key": "extra_field_1", "value": "value_1"},
+    {"key": "extra_field_2", "value": "value_2"},
+    {"key": "extra_field_3", "value": "value_3"},
+    {"key": "extra_field_4", "value": "value_4"},
+    {"key": "extra_field_5", "value": "value_5"},
+    {"key": "extra_field_6", "value": "value_6"},
+    {"key": "extra_field_7", "value": "value_7"},
+    {"key": "extra_field_8", "value": "value_8"},
+    {"key": "extra_field_9", "value": "value_9"},
+    {"key": "extra_field_10", "value": "value_10"},
+    {"key": "extra_field_11", "value": "value_11"},
+    {"key": "extra_field_12", "value": "value_12"},
+    {"key": "extra_field_13", "value": "value_13"},
+    {"key": "extra_field_14", "value": "value_14"},
+    {"key": "extra_field_15", "value": "value_15"},
+    {"key": "extra_field_16", "value": "value_16"},
+    {"key": "extra_field_17", "value": "value_17"},
+    {"key": "extra_field_18", "value": "value_18"},
+    {"key": "extra_field_19", "value": "value_19"},
+    {"key": "extra_field_20", "value": "value_20"}
+  ],
+  
+  "additional_settings": [
+    {"setting_1": "value_1"},
+    {"setting_2": "value_2"},
+    {"setting_3": "value_3"},
+    {"setting_4": "value_4"},
+    {"setting_5": "value_5"},
+    {"setting_6": "value_6"},
+    {"setting_7": "value_7"},
+    {"setting_8": "value_8"},
+    {"setting_9": "value_9"},
+    {"setting_10": "value_10"},
+    {"setting_11": "value_11"},
+    {"setting_12": "value_12"},
+    {"setting_13": "value_13"},
+    {"setting_14": "value_14"},
+    {"setting_15": "value_15"},
+    {"setting_16": "value_16"},
+    {"setting_17": "value_17"},
+    {"setting_18": "value_18"},
+    {"setting_19": "value_19"},
+    {"setting_20": "value_20"}
+  ],
+  
+  "random_values_section": [
+    {"key": "rand_value_1", "value": "random_string_001"},
+    {"key": "rand_value_2", "value": "random_string_002"},
+    {"key": "rand_value_3", "value": "random_string_003"},
+    {"key": "rand_value_4", "value": "random_string_004"},
+    {"key": "rand_value_5", "value": "random_string_005"},
+    {"key": "rand_value_6", "value": "random_string_006"},
+    {"key": "rand_value_7", "value": "random_string_007"},
+    {"key": "rand_value_8", "value": "random_string_008"},
+    {"key": "rand_value_9", "value": "random_string_009"},
+    {"key": "rand_value_10", "value": "random_string_010"}
+  ]
+}
